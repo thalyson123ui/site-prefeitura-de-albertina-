@@ -1,0 +1,161 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Bebas Neue", sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* Corpo da página */
+body {
+    background-color: #fff;
+    text-align: center;
+    color: #69A62D;
+}
+
+/* Cabeçalho */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #488C35;
+    padding: 15px 20px;
+    color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo img {
+    width: 120px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #2BA8D9;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #ffcc00;
+}
+
+.menu-toggle {
+    font-size: 30px;
+    display: none;
+    cursor: pointer;
+}
+
+/* Banner Principal */
+.banner {
+    background: url('4d07baecf13401f092a08cc536d6290e.jpeg') no-repeat center center/cover;
+    color: white;
+    padding: 100px 20px;
+    margin-top: 80px;
+}
+
+/* Seções */
+.info {
+    padding: 60px 20px;
+    background-color: grey;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px #69A62D;
+}
+
+.info h2 {
+    margin-bottom: 20px;
+}
+
+/* Parallax */
+.parallax {
+    background: url('images.jpeg') no-repeat center center/cover;
+    background-attachment: fixed;
+    color: white;
+    padding: 80px 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Rodapé */
+footer {
+    background-color: #F2CB05;
+    color: white;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+/* Media Queries - Responsividade */
+@media (max-width: 1024px) {
+    .banner {
+        padding: 80px 20px;
+    }
+    
+    .parallax {
+        background-attachment: scroll;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background: #2BA8D9;
+        width: 150px;
+        border-radius: 5px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .banner {
+        padding: 60px 20px;
+    }
+
+    .info {
+        padding: 40px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo img {
+        width: 90px;
+    }
+
+    .menu-toggle {
+        font-size: 25px;
+    }
+
+    .banner h1 {
+        font-size: 22px;
+    }
+
+    .info {
+        padding: 30px 10px;
+    }
+
+    .info h2 {
+        font-size: 20px;
+    }
+}
